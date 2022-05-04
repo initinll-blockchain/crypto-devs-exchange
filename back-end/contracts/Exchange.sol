@@ -20,7 +20,7 @@ contract Exchange is ERC20 {
         return ERC20(cryptoDevTokenAddress).balanceOf(address(this));
     }
 
-    function addLiquidity(uint _amount) public payable returns(unit) {
+    function addLiquidity(uint _amount) public payable returns(uint) {
         uint liquidity;
         uint ethBalance = address(this).balance;
         uint cryptoDevTokenReserve = getReserve();
